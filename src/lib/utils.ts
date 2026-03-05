@@ -1,0 +1,81 @@
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
+export const projects = [
+  {
+    slug: "atlas-clinic",
+    title: "Atlas Clinic",
+    type: "Landing / Conversão",
+    year: "2025",
+    thumbnail: "https://picsum.photos/seed/atlas/1600/1000",
+    demoUrl: "/demos/atlas-clinic",
+    objective: "Aumentar agendamentos de consultas particulares.",
+    stack: ["Next.js", "Tailwind", "Framer Motion"],
+    results: ["+27% solicitações em 30 dias", "Carregamento < 1s"],
+    microResult: "+27% solicitações*",
+  },
+  {
+    slug: "nexo-real",
+    title: "Nexo Real",
+    type: "Institucional / SEO",
+    year: "2025",
+    thumbnail: "https://picsum.photos/seed/nexo/1600/1000",
+    demoUrl: "/demos/nexo-real",
+    objective: "Posicionar a imobiliária como líder no segmento de luxo.",
+    stack: ["Next.js", "CMS Headless", "SEO Avançado"],
+    results: ["Tempo na página ↑ +41%", "Top 3 no Google para keywords locais"],
+    microResult: "tempo na página ↑ +41%*",
+  },
+  {
+    slug: "volt-crm",
+    title: "Volt CRM",
+    type: "SaaS / UI System",
+    year: "2024",
+    thumbnail: "https://picsum.photos/seed/volt/1600/1000",
+    demoUrl: "/demos/volt-crm",
+    objective: "Reduzir churn através de uma interface mais intuitiva.",
+    stack: ["React", "Tailwind", "Radix UI"],
+    results: ["Demo mais clara", "Churn reduzido em 15%"],
+    microResult: "demo mais clara, churn ↓*",
+  },
+  {
+    slug: "verde-norte",
+    title: "Verde Norte",
+    type: "E-commerce / Performance",
+    year: "2024",
+    thumbnail: "https://picsum.photos/seed/verde/1600/1000",
+    demoUrl: "/demos/verde-norte",
+    objective: "Otimizar a experiência mobile para vendas diretas.",
+    stack: ["Shopify Headless", "Next.js", "Vercel"],
+    results: ["LCP 1.9s (mobile)", "Conversão mobile ↑ 22%"],
+    microResult: "LCP 1.9s (mobile)*",
+  },
+  {
+    slug: "orion-law",
+    title: "Orion Law",
+    type: "Institucional / Autoridade",
+    year: "2023",
+    thumbnail: "https://picsum.photos/seed/orion/1600/1000",
+    demoUrl: "/demos/orion-law",
+    objective: "Transmitir autoridade e confiança para grandes contas.",
+    stack: ["Next.js", "GSAP", "WebGL"],
+    results: ["Leads qualificados ↑", "Prêmio de design Awwwards (Honorable)"],
+    microResult: "leads qualificados ↑*",
+  },
+  {
+    slug: "kairo-studio",
+    title: "Kairo Studio",
+    type: "Portfólio / Motion",
+    year: "2023",
+    thumbnail: "https://picsum.photos/seed/kairo/1600/1000",
+    demoUrl: "/demos/kairo-studio",
+    objective: "Showcase criativo para estúdio de fotografia.",
+    stack: ["React", "Three.js", "Framer Motion"],
+    results: ["Retenção ↑", "Viralização em redes sociais"],
+    microResult: "retenção ↑*",
+  },
+];

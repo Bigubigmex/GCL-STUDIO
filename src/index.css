@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-bg: #0B0F14;
+  --color-text: #E6E8EB;
+  --color-accent: #39FF14;
+  
+  --color-muted-text: rgba(230, 232, 235, 0.72);
+  --color-faint-text: rgba(230, 232, 235, 0.52);
+  --color-stroke: rgba(230, 232, 235, 0.10);
+  --color-stroke-strong: rgba(230, 232, 235, 0.16);
+  --color-surface: rgba(230, 232, 235, 0.03);
+  --color-surface2: rgba(230, 232, 235, 0.05);
+  --color-accent-soft: rgba(57, 255, 20, 0.18);
+}
+
+:root {
+  --bg: #0B0F14;
+  --text: #E6E8EB;
+  --accent: #39FF14;
+  --mutedText: rgba(230, 232, 235, 0.72);
+  --faintText: rgba(230, 232, 235, 0.52);
+  --stroke: rgba(230, 232, 235, 0.10);
+  --strokeStrong: rgba(230, 232, 235, 0.16);
+  --surface: rgba(230, 232, 235, 0.03);
+  --surface2: rgba(230, 232, 235, 0.05);
+  --accentSoft: rgba(57, 255, 20, 0.18);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-display); /* Space Grotesk as primary */
+  overflow-x: hidden;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01", "ss02", "ss03"; /* Stylistic sets if available */
+}
+
+/* Typography Scale */
+h1 {
+  font-size: clamp(40px, 8vw, 72px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.0;
+}
+
+h2 {
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+p {
+  font-family: var(--font-sans); /* Inter for body fallback if needed, but prompt said Space Grotesk for everything. Let's stick to Space Grotesk mostly but use Inter for density if needed. Prompt: "Use Space Grotesk para tudo (inclusive corpo)" */
+  font-family: var(--font-display);
+  font-size: clamp(15px, 1.5vw, 18px);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.6;
+  color: var(--mutedText);
+}
+
+.text-micro {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: var(--font-sans); /* Inter works better for micro labels */
+}
+
+/* Utilities */
+.container-custom {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-custom {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--strokeStrong);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mutedText);
+}
+
+/* Lenis */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
