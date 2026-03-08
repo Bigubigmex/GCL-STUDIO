@@ -18,12 +18,12 @@ export default function SelectedWork({ onProjectClick }: SelectedWorkProps) {
             viewport={{ once: true }}
             className="mb-4"
           >
-            Projetos selecionados.
+            Projetos focados em uma única coisa:
             <br />
-            <span className="text-[var(--mutedText)]">Zero enfeite. Só resultado.</span>
+            <span className="text-[var(--mutedText)]">resultado.</span>
           </motion.h2>
           <p className="max-w-md">
-            Abra o preview aqui mesmo. Se quiser, veja em nova aba e compare com calma.
+            Eu não preciso de 50 modelos para te enrolar. Eu faço páginas objetivas, que explicam seu serviço e puxam o cliente para ação. Veja o que eu já entreguei:
           </p>
         </div>
 

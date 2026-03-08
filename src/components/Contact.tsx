@@ -14,10 +14,10 @@ export default function Contact() {
               viewport={{ once: true }}
               className="mb-8"
             >
-              Vamos construir algo que pareça inevitável.
+              Chega de perder venda para quem é menos profissional que você.
             </motion.h2>
             <p className="text-xl mb-12 max-w-md">
-              Me diga o que você vende e onde quer chegar. Eu retorno com direção e orçamento.
+              Vamos colocar sua empresa em outro nível ainda essa semana? Clique no botão abaixo e me diga qual o seu objetivo. Eu vou te passar a melhor estratégia para o seu caso.
             </p>
 
             <div className="space-y-8">
@@ -30,12 +30,12 @@ export default function Contact() {
 
               <Magnet>
                 <a 
-                  href="https://wa.me/1234567890?text=Oi!%20Quero%20um%20site%20premium.%20Meu%20neg%C3%B3cio%20%C3%A9%20___" 
+                  href="https://wa.me/1234567890?text=Oi!%20Quero%20garantir%20meu%20site.%20Meu%20neg%C3%B3cio%20%C3%A9%20___" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] text-white font-bold rounded-lg hover:bg-[#128C7E] transition-colors"
                 >
-                  Chamar no WhatsApp
+                  Chamar no WhatsApp e garantir meu site
                 </a>
               </Magnet>
             </div>

@@ -5,27 +5,17 @@ export default function Process() {
     {
       number: "01",
       title: "Diagnóstico",
-      desc: "Entendo oferta, público e meta em 20 minutos."
+      desc: "Conversamos 15 minutos para eu entender o que você vende e quem é seu cliente."
     },
     {
       number: "02",
-      title: "Direção",
-      desc: "Defino arquitetura, hierarquia e tom visual."
+      title: "Construção",
+      desc: "Eu monto toda a estrutura focada em facilitar o contato do seu cliente."
     },
     {
       number: "03",
-      title: "UI System",
-      desc: "Tokens, componentes e regras (pra não virar bagunça)."
-    },
-    {
-      number: "04",
-      title: "Build",
-      desc: "Next.js + motion + performance desde o início."
-    },
-    {
-      number: "05",
-      title: "Polimento",
-      desc: "Microinterações, responsivo, SEO e entrega."
+      title: "Entrega",
+      desc: "Você aprova, eu coloco no ar e seu negócio passa a ter uma máquina de vendas 24h."
     }
   ];
 
@@ -40,9 +30,9 @@ export default function Process() {
               viewport={{ once: true }}
               className="mb-6"
             >
-              Processo direto.
+              Sem enrolação.
               <br />
-              <span className="text-[var(--mutedText)]">Sem rodeio. Sem retrabalho.</span>
+              <span className="text-[var(--mutedText)]">Seu site no ar para começar a gerar contato.</span>
             </motion.h2>
             <p className="mb-12 text-lg">
               Um fluxo enxuto que protege prazo e eleva qualidade.

@@ -1,104 +1,47 @@
-import { motion } from 'motion/react';
-import { ArrowUpRight } from 'lucide-react';
-import Magnet from './Magnet';
+import { GclEtherealHeroBg } from './ui/gcl-ethereal-hero-bg';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center relative pt-32 pb-20">
-      <div className="container-custom grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-end">
-        
-        <div className="lg:col-span-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8 flex items-center gap-4"
-          >
-            <span className="text-micro text-[var(--accent)]">DESIGN + ENGENHARIA FRONTEND</span>
-            <div className="h-px w-12 bg-[var(--strokeStrong)]" />
-          </motion.div>
+    <section className="bg-[#0B0F14] px-6 pb-16 pt-28 text-white">
+      <div className="mx-auto max-w-7xl">
+        <GclEtherealHeroBg
+          className="min-h-[620px] rounded-[32px] border border-white/10"
+          color="rgba(57,255,20,0.14)"
+          animation={{ scale: 60, speed: 55 }}
+          noise={{ opacity: 0.08, scale: 1 }}
+        >
+          <div className="flex min-h-[620px] items-center justify-center px-6 py-16 md:px-12 lg:px-16">
+            <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
+              <p className="mb-6 inline-flex rounded-full border border-[#39FF14]/20 bg-[#39FF14]/10 px-4 py-2 text-sm text-[#D8FFD0]">
+                Geralmente respondo em até 1 hora.
+              </p>
 
-          <h1 className="mb-8">
-            <div className="overflow-hidden">
-              <motion.div
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
-                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-              >
-                Sites que parecem caros.
-              </motion.div>
+              <h1 className="max-w-5xl text-4xl font-semibold leading-[0.95] tracking-[-0.04em] md:text-6xl lg:text-7xl">
+                Você está deixando dinheiro na mesa todos os dias por não ter um site que vende.
+              </h1>
+
+              <p className="mt-6 max-w-3xl text-base leading-7 text-white/72 md:text-lg">
+                Se você não tem um site profissional, o cliente entra no seu Instagram, não entende rápido, não confia e fecha com o concorrente. Eu crio a página certa para parar de depender só de indicação e começar a receber orçamentos e agendamentos com clareza.
+              </p>
+
+              <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <a
+                  href="#"
+                  className="inline-flex items-center justify-center rounded-2xl bg-[#39FF14] px-6 py-3 text-sm font-semibold text-[#071006] transition hover:translate-y-[-1px]"
+                >
+                  Quero um orçamento no WhatsApp
+                </a>
+
+                <a
+                  href="#projetos"
+                  className="inline-flex items-center justify-center rounded-2xl border border-white/12 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  Ver projetos
+                </a>
+              </div>
             </div>
-            <div className="overflow-hidden">
-              <motion.div
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
-                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-                className="text-[var(--mutedText)]"
-              >
-                E vendem como tal.
-              </motion.div>
-            </div>
-          </h1>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="max-w-xl text-lg md:text-xl mb-12"
-          >
-            Eu desenho e construo experiências digitais rápidas, tipográficas e cirúrgicas — feitas para converter, não para “encher portfólio”.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-wrap gap-6"
-          >
-            <Magnet>
-              <a 
-                href="#contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--accent)] text-[var(--bg)] font-bold rounded-lg hover:bg-white transition-colors"
-              >
-                Pedir orçamento no WhatsApp
-              </a>
-            </Magnet>
-            <Magnet>
-              <a 
-                href="#work"
-                className="inline-flex items-center gap-2 px-8 py-4 border border-[var(--stroke)] text-white font-medium rounded-lg hover:bg-[var(--surface2)] transition-colors"
-              >
-                Ver projetos selecionados
-              </a>
-            </Magnet>
-          </motion.div>
-        </div>
-
-        <div className="lg:col-span-4 space-y-4">
-          {[
-            "Motion premium (Framer) sem pesar performance.",
-            "Next.js + TypeScript + estrutura escalável.",
-            "Ritmo, grid e detalhes de estúdio — nada de template."
-          ].map((text, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 + (i * 0.1) }}
-              className="p-4 border border-[var(--stroke)] bg-[var(--surface)] rounded-lg"
-            >
-              <p className="text-sm text-[var(--mutedText)]">{text}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Decorative Grid Trace */}
-      <div className="absolute bottom-12 right-12 hidden md:block opacity-20">
-        <div className="flex gap-2 text-[10px] font-mono">
-          <span>X: 1204</span>
-          <span>Y: 0842</span>
-        </div>
+          </div>
+        </GclEtherealHeroBg>
       </div>
     </section>
   );

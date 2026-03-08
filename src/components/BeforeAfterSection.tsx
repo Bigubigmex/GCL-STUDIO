@@ -12,13 +12,26 @@ export default function BeforeAfterSection() {
             viewport={{ once: true }}
             className="mb-4"
           >
-            Antes vs Depois.
+            Um investimento que pode se pagar
             <br />
-            <span className="text-[var(--mutedText)]">O mesmo negócio. Outra percepção.</span>
+            <span className="text-[var(--mutedText)]">com poucos clientes novos.</span>
           </motion.h2>
-          <p className="max-w-xl">
-            Re-design não é “embelezar”. É organizar atenção, reduzir fricção e aumentar intenção.
-          </p>
+          <div className="max-w-xl space-y-4 text-[var(--mutedText)]">
+            <p>
+              Quanto vale um cliente novo para você hoje? O site custa entre R$ 500 e R$ 1.000, investimento único. Isso significa que, se o site te trouxer apenas 2 ou 3 clientes novos, ele já se pagou. Todo o resto é lucro para sua empresa.
+            </p>
+            <ul className="space-y-2 pt-2">
+              <li className="flex items-center gap-2">
+                <span className="text-[var(--accent)]">✓</span> Site ultra rápido no celular.
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-[var(--accent)]">✓</span> Botão de WhatsApp em destaque.
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-[var(--accent)]">✓</span> Pronto para receber anúncios.
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

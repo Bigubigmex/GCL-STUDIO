@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import FeaturedScroll from '../components/sections/featured-scroll.tsx';
 import SelectedWork from '../components/SelectedWork';
 import BeforeAfterSection from '../components/BeforeAfterSection';
 import Process from '../components/Process';
@@ -22,6 +23,7 @@ export default function Home() {
         
         <main>
           <Hero />
+          <FeaturedScroll />
           <SelectedWork onProjectClick={setSelectedProject} />
           <BeforeAfterSection />
           <Process />
